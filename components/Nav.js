@@ -9,7 +9,8 @@ const Nav = () => {
   const router = useRouter();
 
   return (
-    <nav>
+    <nav className="relative">
+       <div className="absolute top-0 right-0 bg-gradient-to-b from-black to h-3/4 w-full"/>
       <div className="pt-2 w-24 px-2">
         <Image src={dstv} height={30} width={80} />
       </div>
@@ -27,7 +28,7 @@ const Nav = () => {
             </>
           ))}
         </div>
-        <div className="absolute top-0 right-0 bg-gradient-to-l from-black to h-10 w-1/12" />
+        {/* <div className="absolute top-0 right-0 bg-gradient-to-l from-black to h-10 w-1/12" /> */}
         </div>
     </nav>
   );
