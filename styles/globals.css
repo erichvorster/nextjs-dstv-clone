@@ -7,6 +7,21 @@
     @apply bg-[#000000] text-white 
   }
 }
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+*{
+  font-family:"Roboto", sans-serif;
+}
 
 html,
 body {
