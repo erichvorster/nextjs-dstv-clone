@@ -4,6 +4,7 @@ import Row from "../components/Row";
 import requests from "../utilities/requests";
 import FlexRow from "../components/FlexRow";
 import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 
 export async function getServerSideProps(context) {
   const genre = context.query.genre;
@@ -24,9 +25,10 @@ const Results = ({ topRated }) => {
   return (
     <div>
       <Navigation />
-      <Nav />
-
-      <FlexRow title={"Top Rated"} results={topRated} />
+      <div>
+        <FlexRow title={"Top Rated"} results={topRated} />
+      </div>
+      <Footer />
     </div>
   );
 };
