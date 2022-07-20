@@ -34,14 +34,14 @@ const Featured = ({ hero }) => {
           </p>
         </div>
         <div className="pl-3 pt-4 flex z-10 relative sm:mx-10 lg:pl-8">
-          <button className="h-8 w-20 lg:h-10 lg:w-28 bg-white text-black rounded-full cursor-pointer hover:bg-sky-500 hover:text-black">
+          <button className="h-8 w-20 lg:h-10 lg:w-28 bg-white text-black rounded-full cursor-pointer hover:bg-sky-500 hover:text-white duration-300">
             Watch
           </button>
           <div className="pl-2">
-            <InformationCircleIcon className=" h-9 w-9 lg:h-11 lg:w-11" />
+            <InformationCircleIcon className=" h-9 w-9 lg:h-11 lg:w-11 hover:text-sky-500 duration-300 cursor-pointer" />
           </div>
           <div className="pl-2">
-            <PlusCircleIcon className=" h-9 w-9 lg:h-11 lg:w-11" />
+            <PlusCircleIcon className=" h-9 w-9 lg:h-11 lg:w-11 hover:text-sky-500 duration-300 cursor-pointer" />
           </div>
         </div>
         <div className="absolute z-0 left-0 bottom-0 bg-gradient-to-t from-black to h-1/4 w-full" />
