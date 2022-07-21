@@ -31,7 +31,7 @@ const Navigation = () => {
         <div className="flex lg:py-3">
           <div className=" w-20 h-6  relative hover:cursor-pointer mr-6 md:mr-10 ml-4 lg:ml-0 sm:ml-12">
             <Link href={"/"}>
-              <Image src={dstv} layout="fill" />
+              <Image src={dstv} layout="fill" alt="dstv" />
             </Link>
           </div>
           <nav>

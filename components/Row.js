@@ -43,7 +43,7 @@ const Row = ({ results, title }) => {
         className="scroll-smooth py-1 flex no-scrollbar flex-nowrap ml-3 overflow-x-scroll  touch-pan-x "
       >
         {results.map((result) => {
-          return <Poster result={result} />;
+          return <Poster result={result} key={result.id} />;
         })}
       </div>
     </div>

@@ -14,6 +14,7 @@ const Poster = ({ result }) => {
           className="object-cover transition-transform "
           src={`${BASE_URL}${result.backdrop_path}`}
           layout="fill"
+          alt="movie"
         />
         <div className="hidden md:inline-block p-4">
           <div className=" z-50 ">
@@ -25,6 +26,7 @@ const Poster = ({ result }) => {
                   height={1980}
                   width={1000}
                   layout="responsive"
+                  alt="movie"
                 />
               </div>
               <div className="flex">
