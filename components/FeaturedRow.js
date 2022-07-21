@@ -4,8 +4,10 @@ import Image from "next/image";
 import Poster from "./Poster";
 import Link from "next/link";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/outline";
+import Featured from "./Featured";
+import FeaturedPoster from "./FeaturedPoster";
 
-const Row = ({ results, title }) => {
+const FeaturedRow = ({ results, title }) => {
   const ref = useRef();
 
   const scroll = (scrollOffset) => {
@@ -23,31 +25,31 @@ const Row = ({ results, title }) => {
 
   console.log(results);
   return (
-    <div className="mb-5 sm:mx-8 relative ">
+    <div className="mb-5 mx-auto sm:mx-8 relative ">
       <button
         onClick={() => scroll(-1000)}
-        className="absolute left-0 bottom-2 w-10 md:h-44 lg:h-52  bg-zinc-900/50 z-50 h-52 ml-4 hidden md:inline-block"
+        className="absolute left-0 bottom-2 w-12 bg-zinc-900/50 z-50 h-52 ml-3 hidden md:inline-block"
       >
         <ChevronLeftIcon className="text-white/75 " />
       </button>
       <button
         onClick={() => scroll(1000)}
-        className="absolute right-0 bottom-2  md:h-44 lg:h-52 w-10 bg-zinc-900/50 z-50 hidden md:inline-block"
+        className="absolute right-0 bottom-2 h-52 w-12 bg-zinc-900/50 z-50 hidden md:inline-block"
       >
         <ChevronRightIcon />
       </button>
-      <h3 className="ml-5 lg:text-xl mb-1">{title}</h3>
+      <h3 className="ml-5 lg:text-xl mb-2">{title}</h3>
       <div
         onScroll={() => detectScrollEnd}
         ref={ref}
         className="scroll-smooth py-1 flex no-scrollbar flex-nowrap ml-3 overflow-x-scroll  touch-pan-x "
       >
         {results.map((result) => {
-          return <Poster result={result} />;
+          return <FeaturedPoster result={result} />;
         })}
       </div>
     </div>
   );
 };
 
-export default Row;
+export default FeaturedRow;

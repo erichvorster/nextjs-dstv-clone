@@ -5,6 +5,9 @@ import { InformationCircleIcon } from "@heroicons/react/outline";
 import { PlusCircleIcon } from "@heroicons/react/outline";
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
+import requests from "../../utilities/requests";
+import Row from "../../components/Row";
+import FeaturedRow from "../../components/FeaturedRow";
 // import mnet from ".../public/mnet";
 
 const API_KEY = process.env.API_KEY;
@@ -16,14 +19,24 @@ export async function getServerSideProps(context) {
     `https://api.themoviedb.org/3/movie/${watch}?api_key=${API_KEY}`
   ).then((res) => res.json());
 
+  const request = await fetch(
+    `https://api.themoviedb.org/3${requests.fetchTrending.url}`
+  ).then((res) => res.json());
+
+  const request2 = await fetch(
+    `https://api.themoviedb.org/3${requests.fetchTopRated.url}`
+  ).then((res) => res.json());
+
   return {
     props: {
       hero: request4,
+      trending: request.results,
+      topRated: request2.results,
     },
   };
 }
 
-const watch = ({ hero }) => {
+const watch = ({ hero, trending, topRated }) => {
   const BASE_URL = "https://image.tmdb.org/t/p/original/";
   console.log(hero);
 
@@ -67,6 +80,8 @@ const watch = ({ hero }) => {
           <div className="absolute z-0 left-0 bottom-0 bg-gradient-to-t from-black to h-1/4 w-full" />
         </div>
       </div>
+      <FeaturedRow results={trending} title={"Trending"}></FeaturedRow>
+      <FeaturedRow results={topRated} title={"Top Rated"}></FeaturedRow>
       <Footer />
     </>
   );

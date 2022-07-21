@@ -23,7 +23,7 @@ export default {
   },
   fetchRomanceMovies: {
     title: "Romance",
-    url: `/discover/movie?api_key=${API_KEY}&with_genres=10479`,
+    url: `/discover/movie?api_key=${API_KEY}&with_genres=10749`,
   },
   fetchMystery: {
     title: "Mystery",
@@ -39,7 +39,7 @@ export default {
   },
   fetchMystery: {
     title: "Western",
-    url: `/discover/movie?api_key=${API_KEY}&with_genres=16`,
+    url: `/discover/movie?api_key=${API_KEY}&with_genres=9648`,
   },
   fetchTV: {
     title: "TV",

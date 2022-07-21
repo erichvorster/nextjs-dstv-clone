@@ -8,9 +8,9 @@ import Nav from "./Nav";
 const FlexRow = ({ results, title }) => {
   console.log(results);
   return (
-    <div className="pt-36 lg:ml-16">
+    <div className="pt-24 md:pt-28 lg:pt-36 flex lg:mx-18 justify-center md:mx-8">
       <Nav />
-      <div className="py-3 flex  no-scrollbar flex-wrap ml-3 overflow-x-scroll  touch-pan-x">
+      <div className="py-3 px-3  grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-10 gap-1 sm:gap-2  no-scrollbar ">
         {results.map((result) => {
           return (
             <>

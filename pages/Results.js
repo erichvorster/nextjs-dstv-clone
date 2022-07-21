@@ -26,7 +26,7 @@ const Results = ({ topRated }) => {
     <div>
       <Navigation />
       <div>
-        <FlexRow title={"Top Rated"} results={topRated} />
+        <FlexRow classname="mx-auto" title={"Top Rated"} results={topRated} />
       </div>
       <Footer />
     </div>
