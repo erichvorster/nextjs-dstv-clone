@@ -25,8 +25,8 @@ const Nav = () => {
     <nav
       className={
         navScroll
-          ? "bg-black pl-2 mt-7 fixed py-8 top-11 z-40 w-full duration-300"
-          : "bg-transparent pl-2 mt-7 fixed py-8 top-11 z-40  w-full duration-300"
+          ? "bg-black pl-2 mt-7 fixed py-5 lg:py-8 top-6 lg:top-11 z-40 w-full duration-300 sm:ml-8"
+          : "bg-transparent pl-2 mt-7 fixed py-5 lg:py-8  top-6 z-40 lg:top-11 w-full duration-300 sm:ml-8"
       }
     >
       <div className="absolute top-0 right-0  to h-3/4 w-full" />

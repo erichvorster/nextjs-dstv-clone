@@ -38,7 +38,7 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      hero: request.results[0],
+      hero: request.results[1],
       results: request.results,
       topRated: request2.results,
       actionMovies: request3.results,
