@@ -14,12 +14,13 @@ const FeaturedPoster = ({ result }) => {
           className="object-cover transition-transform "
           src={`${BASE_URL}${result.backdrop_path}`}
           layout="fill"
+          alt="movie"
         />
         <div className=" p-4">
           <div className=" z-50 ">
             <div className="flex justify-between">
               <div className="h-5 w-6 relative ml-2 mb-2 opacity-0 group-hover:opacity-100 duration-300 z-50">
-                <Image className="" src={mnet} layout="fill" />
+                <Image className="" src={mnet} layout="fill" alt="movie" />
               </div>
               <div className="flex">
                 <div className="opacity-0 group-hover:opacity-100 pl-1 cursor-pointer hover:text-sky-500 duration-300 relative z-50">

@@ -45,7 +45,7 @@ const FeaturedRow = ({ results, title }) => {
         className="scroll-smooth py-1 flex no-scrollbar flex-nowrap ml-3 overflow-x-scroll  touch-pan-x "
       >
         {results.map((result) => {
-          return <FeaturedPoster result={result} />;
+          return <FeaturedPoster result={result} key={result.id} />;
         })}
       </div>
     </div>

@@ -14,7 +14,7 @@ const FlexRow = ({ results, title }) => {
         {results.map((result) => {
           return (
             <>
-              <FlexPoster result={result} />
+              <FlexPoster result={result} key={result.id} />
             </>
           );
         })}

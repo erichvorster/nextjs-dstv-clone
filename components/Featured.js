@@ -24,7 +24,7 @@ const Featured = ({ hero }) => {
       >
         <div className="pt-56 sm:pt-72 lg:pt-40  sm:mx-10 lg:pl-8">
           <div className="h-6 w-7 lg:h-8 lg:w-9 relative ml-3 mb-2">
-            <Image src={mnet} layout="fill" />
+            <Image src={mnet} layout="fill" alt="mnet" />
           </div>
           <h3 className="text-2xl sm:text-4xl lg:text-5xl font-semibold z-60 sm:pb-8 max-w-sm lg:max-w-2xl">
             {hero.original_title}
